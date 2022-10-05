@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  flask_and_jobs:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    ports:
+      - "5000:5000"
+    volumes:
+      - "./wakaqflask/logs/:/app/wakaqflask/logs/"
+    depends_on:
+      - redis_cache
+  redis_cache:
+    image: redis
+    ports:
+      - "6379:6379"

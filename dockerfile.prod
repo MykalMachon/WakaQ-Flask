@@ -1,0 +1,12 @@
+FROM python:3.8.10-slim-buster
+
+WORKDIR /app/wakaqflask
+COPY wakaqflask/requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+ENV TZ=America/Los_Angeles
+
+COPY wakaqflask/ .
+
+RUN ["chmod", "+x", "./run.sh"]
+CMD ./run.sh

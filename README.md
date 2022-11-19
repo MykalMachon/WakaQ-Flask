@@ -4,4 +4,4 @@ an example repo of using [wakaq distributed task scheduler](https://github.com/w
 ## Issues
 There are a few issues with using WakaQ as a drop-in replacement for basic celery at this point 
 - lack of documentation.
-- lack of username, password, and db selection support for redis broker. 
+- ~~lack of username, password, and db selection support for redis broker.~~ [Resolved now](https://github.com/wakatime/wakaq/issues/6)
